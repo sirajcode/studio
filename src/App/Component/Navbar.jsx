@@ -1,17 +1,15 @@
 import React from 'react'
 import Button from '../../DesignSystem/Button'
-import Container from '../../DesignSystem/Container'
+import Container from '../../DesignSystem/Container';
+import Section from '../../DesignSystem/Section';
 const Navbar = () => {
     return (
         <div>
-        <Container width='sm' >
-           
-                <Button  bg='green'  size='med' border={16}  top={64}>login</Button>
-                <Button bg='yellow' size='med' radii={2} left={64} >login</Button>    
-                
-         </Container>
-         
-           
+            <Container width='sm' >
+                <Section top={8} bg='blue' style={{height:'300px'}}>
+                    <Button size='med'>Hi There hello</Button>      
+                </Section>                  
+         </Container>          
         </div>
     )
 }

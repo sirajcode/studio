@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Button = styled.button`
+const Section = styled.div`
 border:none;
 font-weight: ${({ weight }) => {
        if(weight ==='500' ) return '500'
@@ -73,8 +73,6 @@ margin-right: ${({ right }) => {
       else if(right === 64) return '64px'
   return 'none'
 }};
-    color: #fff; 
-    cursor: pointer;
-    display: inline-block;
+  
 ` 
-export default  Button
+export default  Section
