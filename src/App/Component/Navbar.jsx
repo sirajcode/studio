@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <div>
             <Container width='sm' >
-                <Section top={8} bg='blue' style={{height:'300px'}}>
+                <Section top={8} bg='blue' style={{height:'300px', width:'400px'}}>
                     <Button size='med'>Hi There hello</Button>      
                 </Section>                  
          </Container>          

@@ -62,8 +62,7 @@ margin-left: ${({ left }) => {
       else if(left === 32) return '32px'
       else if(left === 64) return '64px'
   return 'none'
-}}; 
-  
+}};  
 margin-right: ${({ right }) => {
       if(right === 2) return '2px'
       else if(right === 4) return '4px'
