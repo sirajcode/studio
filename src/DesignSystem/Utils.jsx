@@ -7,7 +7,7 @@ const Flex = styled.div`
         if (wrapReverse ==='wrapReverse') return 'wrap-reverse'
         else if (noWrap==='noWrap') return 'nowrap'
         return 'wrap'
-    }};
+    }}; 
     justify-content: ${({justifyCenter,justifyAround,justifyBetween,justifyEnd}) => {
         if (justifyCenter==='justifyCenter') return 'center'
         else if (justifyAround==='justifyAround') return 'space-around'

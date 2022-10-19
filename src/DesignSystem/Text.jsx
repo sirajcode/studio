@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Text = styled.p`
-    // font size
+
+// font size
 font-size:${({ size }) => {
   if (size === 1) return '10px'
       else if(size === 2) return '12px'
@@ -12,6 +13,7 @@ font-size:${({ size }) => {
       else if(size === 7) return '64px'
   return '10px'
 }};
+
 //font wieght
 font-weight: ${({ weight }) => {
       if(weight ==='500' ) return '500'
@@ -19,29 +21,33 @@ font-weight: ${({ weight }) => {
       else if(weight === '700') return '700'
     return '400'
 }}; 
+
 //font style
 font-style: ${props => props.italic ? 'italic' : 'normal'};
+
 //text alignement
 text-align: ${({Align}) => {
     if (Align === 'center') return 'center'
     else if (Align === 'right') return 'right'
     return  'left'
 }};
+
 //bakground  color
 background-color: ${({bg}) => {
-    if (bg=== "green") return 'red'
-      else if(bg === "yellow") return 'yellow'
-      else if(bg ===  "blue") return 'blue'
-  return 'none'
-}};  
-// color
-color: ${({color}) => {
-    if (color=== "green") return 'red'
-      else if(color === "yellow") return 'yellow'
-      else if(color ===  "blue") return 'blue'
+    if (bg=== 'green') return '#31D0AA'
+      else if(bg === 'red') return '#ED4B9E'
+      else if(bg ===  'blue') return '#4B4DED'
   return 'none'
 }};  
 
+// color
+color: ${({color}) => {
+    if (color=== 'green') return '#31D0AA'
+      else if(color === 'red') return '#ED4B9E'
+      else if(color === 'blue') return '#4B4DED'
+  return 'none'
+}};  
+  
 //margin 
 margin: ${({ margin }) => {
       if(margin === 1) return '2px'
@@ -52,6 +58,7 @@ margin: ${({ margin }) => {
       else if(margin === 6) return '64px'
   return 'none'
 }}; 
+
 // margin top
 margin-top: ${({ marginTop }) => {
       if(marginTop === 1) return '2px'
@@ -62,6 +69,7 @@ margin-top: ${({ marginTop }) => {
       else if(marginTop === 6) return '64px'
   return 'none'
 }}; 
+
 //margin bottom
 margin-bottom: ${({ marginBottom }) => {
       if(marginBottom === 1) return '2px'
@@ -72,6 +80,7 @@ margin-bottom: ${({ marginBottom }) => {
       else if(marginBottom === 6) return '64px'
   return 'none'
 }}; 
+
 // margin left 
 margin-left: ${({ marginLeft }) => {
       if(marginLeft === 1) return '2px'
@@ -82,6 +91,7 @@ margin-left: ${({ marginLeft }) => {
       else if(marginLeft === 6) return '64px'
   return 'none'
 }};  
+
 // margin right
 margin-right: ${({ marginRight }) => {
       if(marginRight === 1) return '2px'
@@ -92,6 +102,7 @@ margin-right: ${({ marginRight }) => {
       else if(marginRight === 6) return '64px'
   return 'none'
 }};
+
 //padding
 padding: ${({ padding }) => {
       if(padding === 1) return '2px'
@@ -102,6 +113,7 @@ padding: ${({ padding }) => {
       else if(padding === 6) return '64px'
   return 'none'
 }}; 
+
 // padding top
 margin-top: ${({ paddingTop }) => {
       if(paddingTop === 1) return '2px'
@@ -112,6 +124,7 @@ margin-top: ${({ paddingTop }) => {
       else if(paddingTop === 6) return '64px'
   return 'none'
 }}; 
+
 //padding bottom
 margin-bottom: ${({ paddingBottom }) => {
       if(paddingBottom === 1) return '2px'
@@ -122,6 +135,7 @@ margin-bottom: ${({ paddingBottom }) => {
       else if(paddingBottom === 6) return '64px'
   return 'none'
 }}; 
+
 // padding left 
 margin-left: ${({ paddingLeft }) => {
       if(paddingLeft === 1) return '2px'
@@ -132,6 +146,7 @@ margin-left: ${({ paddingLeft }) => {
       else if(paddingLeft === 6) return '64px'
   return 'none'
 }};  
+
 // padding right
 margin-right: ${({ paddingRight }) => {
       if(paddingRight === 1) return '2px'
