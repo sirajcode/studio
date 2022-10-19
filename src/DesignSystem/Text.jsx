@@ -1,17 +1,15 @@
 import styled from "styled-components";
 
-export const Text = styled.p`
+const Text = styled.p`
 
 // font size
-font-size:${({ size }) => {
-  if (size === 1) return '10px'
-      else if(size === 2) return '12px'
-      else if(size === 3) return '14px'
-      else if(size === 4) return '16px'
-      else if(size === 5) return '24px'
-      else if(size === 6) return '40px'
-      else if(size === 7) return '64px'
-  return '10px'
+font-size:${({ fontSize}) => {
+  if (fontSize === 1) return '14px'
+      else if(fontSize === 2) return '16px'
+      else if(fontSize === 3) return '24px'
+      else if(fontSize === 4) return '40px'
+      else if(fontSize === 5) return '64px'
+  return '14px'
 }};
 
 //font wieght
@@ -159,3 +157,4 @@ margin-right: ${({ paddingRight }) => {
 }};
 
 `
+export default Text;

@@ -3,46 +3,43 @@ import styled from 'styled-components'
 
 const Flex = styled.div`
     display: flex; 
-    flex-wrap: ${({wrapReverse,noWrap}) => {
-        if (wrapReverse ==='wrapReverse') return 'wrap-reverse'
-        else if (noWrap==='noWrap') return 'nowrap'
-        return 'wrap'
-    }}; 
-    justify-content: ${({justifyCenter,justifyAround,justifyBetween,justifyEnd}) => {
-        if (justifyCenter==='justifyCenter') return 'center'
-        else if (justifyAround==='justifyAround') return 'space-around'
-        else if (justifyBetween==='justifyBetween') return 'space-between'
-        else if (justifyEnd==='justifyEnd') return 'flex-end'
+    flex-wrap: ${({wrap}) =>
+        (wrap === 'wrapReverse' ? 'wrap-reverse' : wrap === 'noWrap' ? 'nowrap' : 'wrap')}; 
+    justify-content: ${({justify}) => {
+        if (justify==='Center') return 'center'
+        else if (justify==='SpaceAround') return 'space-around'
+        else if (justify==='SpaceBetween') return 'space-between'
+        else if (justify==='FlexEnd') return 'flex-end'
         return 'flex-start'
     }};
-    align-items: ${({alignStretch,alignEnd,alignCenter,alignBaseline}) => {
-        if (alignStretch==='alignStretch') return 'stretch'
-        else if (alignEnd==='alignEnd') return 'flex-end'
-        else if (alignCenter==='alignCenter') return 'center'
-        else if (alignBaseline==='alignBaseline') return 'baseline'
+    align-items: ${({alignItems}) => {
+        if ( alignItems==='alignStretch') return 'stretch'
+        else if (alignItems==='alignEnd') return 'flex-end'
+        else if (alignItems==='alignCenter') return 'center'
+        else if (alignItems==='alignBaseline') return 'baseline'
         return 'flex-start'
     }};
-    align-content: ${({contentStart,contentEnd,contentCenter,contentBetween,contentAround}) => {
-       if (contentStart==='contentStart') return 'flex-start'
-        else if (contentEnd==='contentEnd') return 'flex-end'
-        else if (contentCenter==='contentCenter') return 'center'
-        else if (contentBetween==='contentBetween') return 'space-between'
-        else if (contentAround==='contentAround') return 'contentAround'
+    align-content: ${({alignContent}) => {
+       if (alignContent==='contentStart') return 'flex-start'
+        else if (alignContent==='contentEnd') return 'flex-end'
+        else if (alignContent==='contentCenter') return 'center'
+        else if (alignContent==='contentBetween') return 'space-between'
+        else if (alignContent==='contentAround') return 'contentAround'
         return 'stretch'
     }};
-    flex-direction: ${({ column, row,rowRevese,columnReverse }) => {
-    if (column === 'column') return 'column' 
-    else if (row === 'row') return 'row'
-    else if(rowRevese ==='row-reverse') return 'row-reverse'
-    else if (columnReverse === 'column-reverse') return 'column-reverse'
+    flex-direction: ${({FLexDirection}) => {
+    if (FLexDirection === 'Column') return 'column' 
+    else if (FLexDirection === 'Row') return 'row'
+    else if(FLexDirection ==='RowReverse') return 'row-reverse'
+    else if (FLexDirection === 'ColumnReverse') return 'column-reverse'
     return 'none'
     }};
 `
 export const Column = styled.div`
-    width: ${({three,four,two}) => {
-        if (three ==='three') return '33.33%'
-        else if (four === 'four') return '25%'
-        else if(two==='two') return '50%'
+    width: ${({nos}) => {
+        if (nos ==='three') return '33.33%'
+        else if (nos === 'four') return '25%'
+        else if(nos==='two') return '50%'
         return '0'
     }};
     padding: ${props => (props.noPadding ? 0 : '15px')};

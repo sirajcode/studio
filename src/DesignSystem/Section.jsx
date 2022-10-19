@@ -4,14 +4,12 @@ const Section = styled.div`
 
 // font size
 font-size:${({ fontSize}) => {
-  if (fontSize === 1) return '10px'
-      else if(fontSize === 2) return '12px'
-      else if(fontSize === 3) return '14px'
-      else if(fontSize === 4) return '16px'
-      else if(fontSize === 5) return '24px'
-      else if(fontSize === 6) return '40px'
-      else if(fontSize === 7) return '64px'
-  return '10px'
+  if (fontSize === 1) return '14px'
+      else if(fontSize === 2) return '16px'
+      else if(fontSize === 3) return '24px'
+      else if(fontSize === 4) return '40px'
+      else if(fontSize === 5) return '64px'
+  return '14px'
 }};
 
 //font wieght
