@@ -154,7 +154,7 @@ padding: ${({ padding }) => {
 }}; 
 
 // padding top
-margin-top: ${({ paddingTop }) => {
+padding-top: ${({ paddingTop }) => {
       if(paddingTop === 1) return '2px'
       else if(paddingTop === 2) return '4px'
       else if(paddingTop === 3) return '8px'
@@ -165,7 +165,7 @@ margin-top: ${({ paddingTop }) => {
 }}; 
 
 //padding bottom
-margin-bottom: ${({ paddingBottom }) => {
+padding-bottom: ${({ paddingBottom }) => {
       if(paddingBottom === 1) return '2px'
       else if(paddingBottom === 2) return '4px'
       else if(paddingBottom === 3) return '8px'
@@ -176,7 +176,7 @@ margin-bottom: ${({ paddingBottom }) => {
 }}; 
 
 // padding left 
-margin-left: ${({ paddingLeft }) => {
+padding-left: ${({ paddingLeft }) => {
       if(paddingLeft === 1) return '2px'
       else if(paddingLeft === 2) return '4px'
       else if(paddingLeft === 3) return '8px'
@@ -187,7 +187,7 @@ margin-left: ${({ paddingLeft }) => {
 }};  
 
 // padding right
-margin-right: ${({ paddingRight }) => {
+padding-right: ${({ paddingRight }) => {
       if(paddingRight === 1) return '2px'
       else if(paddingRight === 2) return '4px'
       else if(paddingRight === 3) return '8px'
