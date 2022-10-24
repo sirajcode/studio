@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Text = styled.p`
 
 // font size
-font-size:${({ fontSize}) => {
+font-size:${({ fontSize }) => {
   if (fontSize === 1) return '14px'
       else if(fontSize === 2) return '16px'
       else if(fontSize === 3) return '24px'

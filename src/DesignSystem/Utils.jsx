@@ -2,32 +2,32 @@
 import styled from 'styled-components'
 
 const Flex = styled.div`
-    display: flex; 
-    flex-wrap: ${({wrap}) =>
-        (wrap === 'wrapReverse' ? 'wrap-reverse' : wrap === 'noWrap' ? 'nowrap' : 'wrap')}; 
-    justify-content: ${({justify}) => {
-        if (justify==='Center') return 'center'
-        else if (justify==='SpaceAround') return 'space-around'
-        else if (justify==='SpaceBetween') return 'space-between'
-        else if (justify==='FlexEnd') return 'flex-end'
+display: flex;
+justify-content: ${({ Justify }) => {
+        if (Justify=== 'Center') return 'center'
+        else if (Justify==='Around') return 'space-around'
+        else if (Justify==='Between') return 'space-between'
+        else if (Justify==='End') return 'flex-end'
         return 'flex-start'
-    }};
-    align-items: ${({alignItems}) => {
-        if ( alignItems==='alignStretch') return 'stretch'
-        else if (alignItems==='alignEnd') return 'flex-end'
-        else if (alignItems==='alignCenter') return 'center'
-        else if (alignItems==='alignBaseline') return 'baseline'
+    }}; 
+flex-wrap: ${({wrap}) =>
+        (wrap === 'wrapReverse' ? 'wrap-reverse' : wrap === 'noWrap' ? 'nowrap' : 'wrap')};
+     align-items: ${({ alignItems }) => {
+        if ( alignItems==='Stretch') return 'stretch'
+        else if (alignItems==='End') return 'flex-end'
+        else if (alignItems==='Center') return 'center'
+        else if (alignItems==='Baseline') return 'baseline'
         return 'flex-start'
-    }};
-    align-content: ${({alignContent}) => {
-       if (alignContent==='contentStart') return 'flex-start'
-        else if (alignContent==='contentEnd') return 'flex-end'
-        else if (alignContent==='contentCenter') return 'center'
-        else if (alignContent==='contentBetween') return 'space-between'
-        else if (alignContent==='contentAround') return 'contentAround'
+}};
+    align-content: ${({ alignContent }) => {
+       if (alignContent==='Start') return 'flex-start'
+        else if (alignContent==='End') return 'flex-end'
+        else if (alignContent==='Center') return 'center'
+        else if (alignContent==='Between') return 'space-between'
+        else if (alignContent==='Around') return 'contentAround'
         return 'stretch'
     }};
-    flex-direction: ${({FLexDirection}) => {
+flex-direction: ${({ FLexDirection }) => {
     if (FLexDirection === 'Column') return 'column' 
     else if (FLexDirection === 'Row') return 'row'
     else if(FLexDirection ==='RowReverse') return 'row-reverse'
