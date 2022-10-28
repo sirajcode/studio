@@ -3,20 +3,20 @@ import styled from 'styled-components'
 const Section = styled.div`
 
 // font size
-font-size:${({ fontSize}) => {
-  if (fontSize === 1) return '14px'
-      else if(fontSize === 2) return '16px'
-      else if(fontSize === 3) return '24px'
-      else if(fontSize === 4) return '40px'
-      else if(fontSize === 5) return '64px'
+font-size:${({ fontSize }) => {
+  if (fontSize === '1') return '14px'
+      else if(fontSize === '2') return '16px'
+      else if(fontSize === '3') return '24px'
+      else if(fontSize === '4') return '40px'
+      else if(fontSize === '5') return '64px'
   return '14px'
 }};
 
 //font wieght
-font-weight: ${({ weight }) => {
-      if(weight ==='500' ) return '500'
-      else if(weight === '600') return '600'
-      else if(weight === '700') return '700'
+font-weight: ${({ bold }) =>{
+      if(bold ==='500' ) return '500'
+      else if(bold === '600') return '600'
+      else if(bold === '700') return '700'
     return '400'
 }}; 
 
@@ -24,9 +24,9 @@ font-weight: ${({ weight }) => {
 font-style: ${props => props.italic ? 'italic' : 'normal'};
 
 //text alignement
-text-align: ${({TextAlign}) => {
-    if (TextAlign === 'center') return 'center'
-    else if (TextAlign === 'right') return 'right'
+text-align: ${({align}) => {
+    if (align === 'center') return 'center'
+    else if (align === 'right') return 'right'
     return  'left'
 }};
   
@@ -87,114 +87,116 @@ background-color: ${({bg}) => {
   return 'none'
 }};  
  
+  
 //margin 
 margin: ${({ margin }) => {
-      if(margin === 1) return '2px'
-      else if(margin === 2) return '4px'
-      else if(margin === 3) return '8px'
-      else if(margin === 4) return '16px'
-      else if(margin === 5) return '32px'
-      else if(margin === 6) return '64px'
+      if(margin === '1') return '2px'
+      else if(margin === '2') return '4px'
+      else if(margin === '3') return '8px'
+      else if(margin === '4') return '16px'
+      else if(margin === '5') return '32px'
+      else if(margin === '6') return '64px'
   return 'none'
 }}; 
 
 // margin top
 margin-top: ${({ marginTop }) => {
-      if(marginTop === 1) return '2px'
-      else if(marginTop === 2) return '4px'
-      else if(marginTop === 3) return '8px'
-      else if(marginTop === 4) return '16px'
-      else if(marginTop === 5) return '32px'
-      else if(marginTop === 6) return '64px'
+      if(marginTop === '1') return '2px'
+      else if(marginTop === '2') return '4px'
+      else if(marginTop === '3') return '8px'
+      else if(marginTop === '4') return '16px'
+      else if(marginTop === '5') return '32px'
+      else if(marginTop === '6') return '64px'
   return 'none'
 }}; 
 
 //margin bottom
 margin-bottom: ${({ marginBottom }) => {
-      if(marginBottom === 1) return '2px'
-      else if(marginBottom === 2) return '4px'
-      else if(marginBottom === 3) return '8px'
-      else if(marginBottom === 4) return '16px'
-      else if(marginBottom === 5) return '32px'
-      else if(marginBottom === 6) return '64px'
+      if(marginBottom === '1') return '2px'
+      else if(marginBottom === '2') return '4px'
+      else if(marginBottom === '3') return '8px'
+      else if(marginBottom === '4') return '16px'
+      else if(marginBottom === '5') return '32px'
+      else if(marginBottom === '6') return '64px'
   return 'none'
 }}; 
 
 // margin left 
 margin-left: ${({ marginLeft }) => {
-      if(marginLeft === 1) return '2px'
-      else if(marginLeft === 2) return '4px'
-      else if(marginLeft === 3) return '8px'
-      else if(marginLeft === 4) return '16px'
-      else if(marginLeft === 5) return '32px'
-      else if(marginLeft === 6) return '64px'
+      if(marginLeft === '1') return '2px'
+      else if(marginLeft === '2') return '4px'
+      else if(marginLeft === '3') return '8px'
+      else if(marginLeft === '4') return '16px'
+      else if(marginLeft === '5') return '32px'
+      else if(marginLeft === '6') return '64px'
   return 'none'
 }};  
 
 // margin right
 margin-right: ${({ marginRight }) => {
-      if(marginRight === 1) return '2px'
-      else if(marginRight === 2) return '4px'
-      else if(marginRight === 3) return '8px'
-      else if(marginRight === 4) return '16px'
-      else if(marginRight === 5) return '32px'
-      else if(marginRight === 6) return '64px'
+      if(marginRight === '1') return '2px'
+      else if(marginRight === '2') return '4px'
+      else if(marginRight === '3') return '8px'
+      else if(marginRight === '4') return '16px'
+      else if(marginRight === '5') return '32px'
+      else if(marginRight === '6') return '64px'
   return 'none'
 }};
 
 //padding
 padding: ${({ padding }) => {
-      if(padding === 1) return '2px'
-      else if(padding === 2) return '4px'
-      else if(padding === 3) return '8px'
-      else if(padding === 4) return '16px'
-      else if(padding === 5) return '32px'
-      else if(padding === 6) return '64px'
+      if(padding === '1') return '2px'
+      else if(padding === '2') return '4px'
+      else if(padding === '3') return '8px'
+      else if(padding === '4') return '16px'
+      else if(padding === '5') return '32px'
+      else if(padding === '6') return '64px'
   return 'none'
 }}; 
 
 // padding top
 padding-top: ${({ paddingTop }) => {
-      if(paddingTop === 1) return '2px'
-      else if(paddingTop === 2) return '4px'
-      else if(paddingTop === 3) return '8px'
-      else if(paddingTop === 4) return '16px'
-      else if(paddingTop === 5) return '32px'
-      else if(paddingTop === 6) return '64px'
+      if(paddingTop === '1') return '2px'
+      else if(paddingTop === '2') return '4px'
+      else if(paddingTop === '3') return '8px'
+      else if(paddingTop === '4') return '16px'
+      else if(paddingTop === '5') return '32px'
+      else if(paddingTop === '6') return '64px'
   return 'none'
 }}; 
 
 //padding bottom
 padding-bottom: ${({ paddingBottom }) => {
-      if(paddingBottom === 1) return '2px'
-      else if(paddingBottom === 2) return '4px'
-      else if(paddingBottom === 3) return '8px'
-      else if(paddingBottom === 4) return '16px'
-      else if(paddingBottom === 5) return '32px'
-      else if(paddingBottom === 6) return '64px'
+      if(paddingBottom === '1') return '2px'
+      else if(paddingBottom === '2') return '4px'
+      else if(paddingBottom === '3') return '8px'
+      else if(paddingBottom === '4') return '16px'
+      else if(paddingBottom === '5') return '32px'
+      else if(paddingBottom === '6') return '64px'
   return 'none'
 }}; 
 
 // padding left 
 padding-left: ${({ paddingLeft }) => {
-      if(paddingLeft === 1) return '2px'
-      else if(paddingLeft === 2) return '4px'
-      else if(paddingLeft === 3) return '8px'
-      else if(paddingLeft === 4) return '16px'
-      else if(paddingLeft === 5) return '32px'
-      else if(paddingLeft === 6) return '64px'
+      if(paddingLeft === '1') return '2px'
+      else if(paddingLeft === '2') return '4px'
+      else if(paddingLeft === '3') return '8px'
+      else if(paddingLeft === '4') return '16px'
+      else if(paddingLeft === '5') return '32px'
+      else if(paddingLeft === '6') return '64px'
   return 'none'
 }};  
 
 // padding right
 padding-right: ${({ paddingRight }) => {
-      if(paddingRight === 1) return '2px'
-      else if(paddingRight === 2) return '4px'
-      else if(paddingRight === 3) return '8px'
-      else if(paddingRight === 4) return '16px'
-      else if(paddingRight === 5) return '32px'
-      else if(paddingRight === 6) return '64px'
+      if(paddingRight === '1') return '2px'
+      else if(paddingRight === '2') return '4px'
+      else if(paddingRight === '3') return '8px'
+      else if(paddingRight === '4') return '16px'
+      else if(paddingRight === '5') return '32px'
+      else if(paddingRight === '6') return '64px'
   return 'none'
 }};
+
 ` 
 export default  Section

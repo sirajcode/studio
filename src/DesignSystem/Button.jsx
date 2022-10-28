@@ -8,7 +8,7 @@ const Button = styled.button`
 font-size: 16px;
 
 //font weight
-font-weight: ${({ weight }) => {
+font-weight: ${({ bold }) => {
        if(weight ==='500' ) return '500'
       else if(weight === '600') return '600'
       else if(weight === '700') return '700'
@@ -17,7 +17,7 @@ font-weight: ${({ weight }) => {
 
 //color
 color: ${({color}) => {
-    if (color=== "green") return '#31D0AA'
+    if (color=== 'green') return '#31D0AA'
       else if(color === 'red') return '#ED4B9E'
       else if(color === 'blue') return '#4B4DED'
   return 'none'
@@ -44,18 +44,18 @@ border:none;
 
 //border radius
 border-radius: ${({ radii }) => {
-      if(radii === 1) return '2px'
-      else if(radii === 2) return '4px'
-      else if(radii === 3) return '8px'
-      else if(radii === 4) return '9999px'
+      if(radii === '1') return '2px'
+      else if(radii === '2') return '4px'
+      else if(radii === '3') return '8px'
+      else if(radii === '4') return '9999px'
   return 'none'
 }}; 
 
 //border size
-border-width:${({ borderSize }) => {
-      if(borderSize === 1) return '2px'
-      else if(borderSize === 2) return '3px'
-      else if(borderSize === 3) return '4px'
+border-width:${({ borderWidth }) => {
+      if(borderSize === '1') return '2px'
+      else if(borderSize === '2') return '3px'
+      else if(borderSize === '3') return '4px'
   return 'none'
 }}; 
 
@@ -81,57 +81,57 @@ padding: ${({size}) => {
 }};
 
 //margin and spacing arround
-margin: ${({ space }) => {
-      if(space === 1) return '2px'
-      else if(space === 2) return '4px'
-      else if(space === 3) return '8px'
-      else if(space === 4) return '16px'
-      else if(space === 5) return '32px'
-      else if(space === 6) return '64px'
+margin: ${({ margin }) => {
+      if(margin === '1') return '2px'
+      else if(margin === '2') return '4px'
+      else if(margin === '3') return '8px'
+      else if(margin === '4') return '16px'
+      else if(margin === '5') return '32px'
+      else if(margin === '6') return '64px'
   return 'none'
 }}; 
 
 //margin top
-margin-top: ${({ top }) => {
-      if(top ===1) return '2px'
-      else if(top ===2) return '4px'
-      else if(top ===3) return '8px'
-      else if(top === 4) return '16px'
-      else if(top === 5) return '32px'
-      else if(top === 6) return '64px'
+margin-top: ${({ marginTop }) => {
+      if(marginTop ==='1') return '2px'
+      else if(marginTop ==='2') return '4px'
+      else if(marginTop ==='3') return '8px'
+      else if(marginTop ==='4') return '16px'
+      else if(marginTop ==='5') return '32px'
+      else if(marginTop ==='6') return '64px'
   return 'none'
 }}; 
 
 //margin botttom
-margin-bottom: ${({ bottom }) => {
-      if(bottom === 1) return '2px'
-      else if(bottom === 2) return '4px'
-      else if(bottom === 3) return '8px'
-      else if(bottom === 4) return '16px'
-      else if(bottom === 5) return '32px'
-      else if(bottom === 6) return '64px'
+margin-bottom: ${({ marginBottom }) => {
+      if(marginBottom === '1') return '2px'
+      else if(marginBottom ==='2') return '4px'
+      else if(marginBottom ==='3') return '8px'
+      else if(marginBottom ==='4') return '16px'
+      else if(marginBottom ==='5') return '32px'
+      else if(marginBottom ==='6') return '64px'
   return 'none'
 }}; 
 
 //margin left
-margin-left: ${({ left }) => {
-      if(left === 1) return '2px'
-      else if(left === 2) return '4px'
-      else if(left === 3) return '8px'
-      else if(left === 4) return '16px'
-      else if(left === 5) return '32px'
-      else if(left === 6) return '64px'
+margin-left: ${({ marginLeft }) => {
+      if(marginLeft === '1') return '2px'
+      else if(marginLeft === '2') return '4px'
+      else if(marginLeft === '3') return '8px'
+      else if(marginLeft === '4') return '16px'
+      else if(marginLeft === '5') return '32px'
+      else if(marginLeft === '6') return '64px'
   return 'none'
 }}; 
 
   //margin right
-margin-right: ${({ right }) => {
-      if(right === 1) return '2px'
-      else if(right === 2) return '4px'
-      else if(right === 3) return '8px'
-      else if(right === 4) return '16px'
-      else if(right === 5) return '32px'
-      else if(right === 6) return '64px'
+margin-right: ${({ marginRight }) => {
+      if(marginRight === '1') return '2px'
+      else if(marginRight === '2') return '4px'
+      else if(marginRight === '3') return '8px'
+      else if(marginRight === '4') return '16px'
+      else if(marginRight === '5') return '32px'
+      else if(marginRight === '6') return '64px'
   return 'none'
 }};
 
