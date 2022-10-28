@@ -4,34 +4,34 @@ import styled from 'styled-components'
 const Flex = styled.div`
 display: flex;
 justify-content: ${({ Justify }) => {
-        if (Justify=== 'Center') return 'center'
-        else if (Justify==='Around') return 'space-around'
-        else if (Justify==='Between') return 'space-between'
-        else if (Justify==='End') return 'flex-end'
+        if (Justify=== 'center') return 'center'
+        else if (Justify==='around') return 'space-around'
+        else if (Justify==='between') return 'space-between'
+        else if (Justify==='end') return 'flex-end'
         return 'flex-start'
     }}; 
 flex-wrap: ${({wrap}) =>
         (wrap === 'wrapReverse' ? 'wrap-reverse' : wrap === 'noWrap' ? 'nowrap' : 'wrap')};
      align-items: ${({ alignItems }) => {
-        if ( alignItems==='Stretch') return 'stretch'
-        else if (alignItems==='End') return 'flex-end'
-        else if (alignItems==='Center') return 'center'
-        else if (alignItems==='Baseline') return 'baseline'
+        if ( alignItems==='stretch') return 'stretch'
+        else if (alignItems==='end') return 'flex-end'
+        else if (alignItems==='center') return 'center'
+        else if (alignItems==='baseline') return 'baseline'
         return 'flex-start'
 }};
     align-content: ${({ alignContent }) => {
-       if (alignContent==='Start') return 'flex-start'
-        else if (alignContent==='End') return 'flex-end'
-        else if (alignContent==='Center') return 'center'
-        else if (alignContent==='Between') return 'space-between'
-        else if (alignContent==='Around') return 'contentAround'
+       if (alignContent==='start') return 'flex-start'
+        else if (alignContent==='end') return 'flex-end'
+        else if (alignContent==='center') return 'center'
+        else if (alignContent==='between') return 'space-between'
+        else if (alignContent==='around') return 'contentAround'
         return 'stretch'
     }};
-flex-direction: ${({ FLexDirection }) => {
-    if (FLexDirection === 'Column') return 'column' 
-    else if (FLexDirection === 'Row') return 'row'
-    else if(FLexDirection ==='RowReverse') return 'row-reverse'
-    else if (FLexDirection === 'ColumnReverse') return 'column-reverse'
+flex-direction: ${({ flexDirection }) => {
+    if (flexDirection === 'Column') return 'column' 
+    else if (flexDirection === 'Row') return 'row'
+    else if(flexDirection ==='RowReverse') return 'row-reverse'
+    else if (flexDirection === 'ColumnReverse') return 'column-reverse'
     return 'none'
     }};
 `
