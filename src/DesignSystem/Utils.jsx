@@ -19,7 +19,7 @@ flex-wrap: ${({wrap}) =>
         else if (alignItems==='baseline') return 'baseline'
         return 'flex-start'
 }};
-    align-content: ${({ alignContent }) => {
+align-content: ${({ alignContent }) => {
        if (alignContent==='start') return 'flex-start'
         else if (alignContent==='end') return 'flex-end'
         else if (alignContent==='center') return 'center'
@@ -29,20 +29,20 @@ flex-wrap: ${({wrap}) =>
     }};
 flex-direction: ${({ flexDirection }) => {
     if (flexDirection === 'Column') return 'column' 
-    else if (flexDirection === 'Row') return 'row'
-    else if(flexDirection ==='RowReverse') return 'row-reverse'
-    else if (flexDirection === 'ColumnReverse') return 'column-reverse'
-    return 'none'
+        else if (flexDirection === 'Row') return 'row'
+        else if(flexDirection ==='RowReverse') return 'row-reverse'
+        else if (flexDirection === 'ColumnReverse') return 'column-reverse'
+        return 'none'
     }};
 `
 export const Column = styled.div`
-    width: ${({nos}) => {
-        if (nos ==='three') return '33.33%'
-        else if (nos === 'four') return '25%'
-        else if(nos==='two') return '50%'
+width: ${({Column}) => {
+        if (Column ==='three') return '33.33%'
+        else if (Column === 'four') return '25%'
+        else if(Column==='two') return '50%'
         return '0'
-    }};
-    padding: ${props => (props.noPadding ? 0 : '15px')};
+}};
+padding: ${props => (props.noPadding ? 0 : '15px')};
 `
 export default Flex
 
