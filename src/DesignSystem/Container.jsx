@@ -4,22 +4,16 @@ const Container = styled.div`
 margin-left:5%;
 margin-right:5%;
 //small container : sm
-padding-right: ${({width}) =>{if (width === 'sm') return 'calc((100vw - 768px) / 2)'}};
-padding-left: ${({width}) =>{if (width==='sm') return 'calc((100vw - 768px) / 2)'
-}};
+padding-right:${props => props.sm ? 'calc((100vw - 768px) / 2)' : 'none'};
+padding-left: ${props => props.sm ? 'calc((100vw - 768px) / 2)' : 'none'};
 
-//large Container : med  
-padding-right: ${({width}) =>{if (width==='med') return 'calc((100vw - 960px) / 2)'
-}};
-padding-left: ${({width}) =>{if (width==='med') return 'calc((100vw - 960px) / 2)'
-}};
+//medium container : med
+padding-right:${props => props.med ? 'calc((100vw - 960px) / 2)' : 'none'};
+padding-left: ${props => props.med ? 'calc((100vw - 960px) / 2)' : 'none'};
 
-//full length container : lg 
-padding-right: ${({width}) =>{if (width==='lg') return 'calc((100vw - 1200px) / 2)'
-}};
-padding-left: ${({width}) =>{
-if (width==='lg') return 'calc((100vw - 1200px) / 2)'}};
-    
+//large container : lg
+padding-right:${props => props.lg ? 'calc((100vw - 1200px) / 2)' : 'none'};
+padding-left: ${props => props.lg ? 'calc((100vw - 1200px) / 2)' : 'none'};
 `
 export default Container
 
