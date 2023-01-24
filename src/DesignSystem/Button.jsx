@@ -1,141 +1,176 @@
 import styled from 'styled-components'
+import { colors, fontWieght, fontSize, BtnSize, RoundConers, borderWidth, spaces } from './Variable'
 
 const Button = styled.button`
 
-//text 
-
 //font size
-font-size: 16px;
-
+font-size: ${props => props.regular ? `${fontSize.regular}`:`${fontSize.text}`};
 //font weight
-font-weight: ${({ bold }) => {
-       if(weight ==='500' ) return '500'
-      else if(weight === '600') return '600'
-      else if(weight === '700') return '700'
-  return '400'
-}};
-
+font-weight: ${(props) =>{
+      if(props.strong) return `${fontWieght.strong}`
+      else if(props.bold) return `${fontWieght.bold}`
+   return `${fontWieght.normal}`
+}}; 
 //color
-color: ${({color}) => {
-    if (color=== 'green') return '#31D0AA'
-      else if(color === 'red') return '#ED4B9E'
-      else if(color === 'blue') return '#4B4DED'
+color: ${(props) => {
+    if (props.red) return `${colors.red}`
+      else if(props.blue) return`${colors.blue}`
+      else if(props.green) return `${colors.green}`
+      else if(props.yellow) return `${colors.yellow}`
+      else if(props.redshade) return `${colors.redshade}`
+      else if(props.blueshade) return `${colors.blueshade}`
+      else if(props.yellowshade) return `${colors.yellowshade}`
+      else if(props.greenshade) return `${colors.greenshade}`
+      else if(props.text) return `${colors.text}`
+      else if(props.lable) return `${colors.lable}`
+      else if(props.disable) return `${colors.disable}`
+      else if(props.darktext) return `${colors.darktext}`   
+      else if(props.darklable) return `${colors.darklable}`
+      else if(props.darkdisable) return `${colors.darkdisable}`
+      else if(props.white) return `${colors.white}`
+      else if(props.whiteshade) return `${colors.whiteshade}`
+      else if(props.dark) return `${colors.dark}`
+      else if(props.dark2) return `${colors.dark2}`                       
+      else if(props.dark3) return `${colors.dark3}`
+      else if(props.darkshade) return `${colors.darkshade}`
   return 'none'
-}};  
+}};   
 
 //background color  
 background-color: ${({bg}) => {
-    if (bg==='green') return '#31D0AA'
-      else if(bg === 'red') return '#ED4B9E'
-      else if(bg ===  'blue') return '#4B4DED'
-  return 'black'
-}}; 
+    if (bg=== 'red') return `${colors.red}`
+      else if(bg==='blue') return`${colors.blue}`                 
+      else if(bg==='green') return `${colors.green}`              
+      else if(bg==='yellow') return `${colors.yellow}`           
+      else if(bg==='redshade') return `${colors.redshade}`        
+      else if(bg==='blueshade') return `${colors.blueshade}`      
+      else if(bg==='yellowshade') return `${colors.yellowshade}`  
+      else if(bg==='greenshade') return `${colors.greenshade}`    
+      else if(bg==='text') return `${colors.text}`                
+      else if(bg==='lable') return `${colors.lable}`              
+      else if(bg==='disable') return `${colors.disable}`          
+      else if(bg==='darktext') return `${colors.darktext}`          
+      else if(bg==='darklable') return `${colors.darklable}`      
+      else if(bg==='darkdisable') return `${colors.darkdisable}`  
+      else if(bg==='white') return `${colors.white}`              
+      else if(bg==='whiteshade') return `${colors.whiteshade}`    
+      else if(bg==='dark') return `${colors.dark}`                
+      else if(bg==='dark2') return `${colors.dark2}`              
+      else if(bg==='dark3') return `${colors.dark3}`              
+      else if(bg==='darkshade') return `${colors.darkshade}`      
+      return 'none'
+}};
 
 //border color
 border-color:${({borderColor}) => {
-    if (borderColor=== 'green') return '#31D0AA'
-      else if(borderColor === 'red') return '#ED4B9E'
-      else if(borderColor === 'blue') return '#4B4DED'
+     if (borderColor=== 'red') return `${colors.red}`
+      else if(borderColor === 'blue') return`${colors.blue}`                 
+      else if(borderColor === 'green') return `${colors.green}`              
+      else if(borderColor === 'yellow') return `${colors.yellow}`           
+      else if(borderColor === 'redshade') return `${colors.redshade}`        
+      else if(borderColor === 'blueshade') return `${colors.blueshade}`      
+      else if(borderColor === 'yellowshade') return `${colors.yellowshade}`  
+      else if(borderColor === 'greenshade') return `${colors.greenshade}`    
+      else if(borderColor === 'text') return `${colors.text}`                
+      else if(borderColor === 'lable') return `${colors.lable}`              
+      else if(borderColor === 'disable') return `${colors.disable}`  
+      else if(borderColor==='darktext') return `${colors.darktext}`   
+      else if(borderColor === 'darklable') return `${colors.darklable}`      
+      else if(borderColor === 'darkdisable') return `${colors.darkdisable}`  
+      else if(borderColor === 'white') return `${colors.white}`              
+      else if(borderColor === 'whiteshade') return `${colors.whiteshade}`    
+      else if(borderColor === 'dark') return `${colors.dark}`                
+      else if(borderColor === 'dark2') return `${colors.dark2}`              
+      else if(borderColor === 'dark3') return `${colors.dark3}`              
+      else if(borderColor === 'darkshade') return `${colors.darkshade}`   
   return 'none'
 }}; 
 
 //border
-border:none;
-
+/* border:none; */
 //border radius
-border-radius: ${({ radii }) => {
-      if(radii === '1') return '2px'
-      else if(radii === '2') return '4px'
-      else if(radii === '3') return '8px'
-      else if(radii === '4') return '9999px'
+border-radius: ${({ Round }) => {
+      if(Round === '1') return `${RoundConers.small}`
+      else if(Round === '2') return `${RoundConers.medium}`
+      else if(Round === '3') return `${RoundConers.large}`
+      else if(Round === '4') return `${RoundConers.exlarge}`
   return 'none'
 }}; 
-
 //border size
-border-width:${({ borderWidth }) => {
-      if(borderSize === '1') return '2px'
-      else if(borderSize === '2') return '3px'
-      else if(borderSize === '3') return '4px'
+border-width:${({ Outline }) => {
+      if(Outline === '1') return `${borderWidth.small}`
+      else if(Outline === '2')  return `${borderWidth.medium}`
+      else if(Outline === '3') return `${borderWidth.large}`
   return 'none'
 }}; 
-
 //border style
-border-style:${({ borderStyle }) => {
-      if(borderStyle === 'solid') return 'solid'
-      else if(borderStyle === 'dotted') return 'dotted'
-      else if(borderStyle === 'dashed') return 'dashed'
-      else if(borderStyle === 'double') return 'double'
-      else if(borderStyle === 'groove') return 'groove'
-      else if(borderStyle === 'ridge') return 'ridge'
-      else if(borderStyle === 'inset') return 'inset'
-      else if(borderStyle === 'outset') return 'outset'
+border-style:${(props) => {
+      if(props.solid) return 'solid'
+      else if(props.dotted) return 'dotted'
+      else if(props.dashed) return 'dashed'
+      else if(props.double) return 'double'
+      else if(props.groove) return 'groove'
+      else if(props.ridge) return 'ridge'
+      else if(props.inset) return 'inset'
+      else if(props.outset) return 'outset'
   return 'none'
 }}; 
- 
-//padding size of button
-padding: ${({size}) => {
-    if (size === 'sm') return '4px 9px'
-      else if(size=== 'med') return '7px 18px'
-      else if(size=== 'lg') return '12px 20px'
-  return '0'
+// size of button
+padding: ${(props) => {
+      if (props.sm) return `${BtnSize.small}`
+      else if(props.med) return `${BtnSize.medium}`
+      else if(props.lg) return  `${BtnSize.large}`
 }};
-
-//margin and spacing arround
-margin: ${({ margin }) => {
-      if(margin === '1') return '2px'
-      else if(margin === '2') return '4px'
-      else if(margin === '3') return '8px'
-      else if(margin === '4') return '16px'
-      else if(margin === '5') return '32px'
-      else if(margin === '6') return '64px'
-  return 'none'
-}}; 
-
-//margin top
-margin-top: ${({ marginTop }) => {
-      if(marginTop ==='1') return '2px'
-      else if(marginTop ==='2') return '4px'
-      else if(marginTop ==='3') return '8px'
-      else if(marginTop ==='4') return '16px'
-      else if(marginTop ==='5') return '32px'
-      else if(marginTop ==='6') return '64px'
-  return 'none'
-}}; 
-
-//margin botttom
-margin-bottom: ${({ marginBottom }) => {
-      if(marginBottom === '1') return '2px'
-      else if(marginBottom ==='2') return '4px'
-      else if(marginBottom ==='3') return '8px'
-      else if(marginBottom ==='4') return '16px'
-      else if(marginBottom ==='5') return '32px'
-      else if(marginBottom ==='6') return '64px'
-  return 'none'
-}}; 
-
-//margin left
-margin-left: ${({ marginLeft }) => {
-      if(marginLeft === '1') return '2px'
-      else if(marginLeft === '2') return '4px'
-      else if(marginLeft === '3') return '8px'
-      else if(marginLeft === '4') return '16px'
-      else if(marginLeft === '5') return '32px'
-      else if(marginLeft === '6') return '64px'
-  return 'none'
-}}; 
-
-  //margin right
-margin-right: ${({ marginRight }) => {
-      if(marginRight === '1') return '2px'
-      else if(marginRight === '2') return '4px'
-      else if(marginRight === '3') return '8px'
-      else if(marginRight === '4') return '16px'
-      else if(marginRight === '5') return '32px'
-      else if(marginRight === '6') return '64px'
-  return 'none'
-}};
-
     cursor: pointer;
     display: inline-block;
+
+// ! button space  top/left/right/bottom ✔
+
+margin: ${({ space }) => {
+      if(space === '1') return `${spaces.smaller}`
+      else if(space === '2')  return `${spaces.small}`
+      else if(space === '3')  return `${spaces.medium}`
+      else if(space === '4')  return `${spaces.large}`
+      else if(space === '5')  return `${spaces.larger}`
+      else if(space === '6')  return `${spaces.extraLarge}`
+  return 'none'
+}}; 
+margin-top: ${({ top }) => {
+      if(top === '1') return `${spaces.smaller}`
+      else if(top === '2')  return `${spaces.small}`
+      else if(top === '3')  return `${spaces.medium}`
+      else if(top === '4')  return `${spaces.large}`
+      else if(top === '5')  return `${spaces.larger}`
+      else if(top === '6')  return `${spaces.extraLarge}`
+  return 'none'
+}}; 
+margin-bottom: ${({ start }) => {
+      if(start === '1') return `${spaces.smaller}`
+      else if(start === '2')  return `${spaces.small}`
+      else if(start === '3')  return `${spaces.medium}`
+      else if(start === '4')  return `${spaces.large}`
+      else if(start === '5')  return `${spaces.larger}`
+      else if(start === '6')  return `${spaces.extraLarge}`
+  return 'none'
+}}; 
+margin-right: ${({ end }) => {
+      if(end === '1') return `${spaces.smaller}`
+      else if(end === '2')  return `${spaces.small}`
+      else if(end === '3')  return `${spaces.medium}`
+      else if(end === '4')  return `${spaces.large}`
+      else if(end === '5')  return `${spaces.larger}`
+      else if(end === '6')  return `${spaces.extraLarge}`
+  return 'none'
+}}; 
+margin-left: ${({ bottom }) => {
+      if(bottom === '1') return `${spaces.smaller}`
+      else if(bottom === '2')  return `${spaces.small}`
+      else if(bottom === '3')  return `${spaces.medium}`
+      else if(bottom === '4')  return `${spaces.large}`
+      else if(bottom === '5')  return `${spaces.larger}`
+      else if(bottom === '6')  return `${spaces.extraLarge}`
+  return 'none'
+}}; 
+
 ` 
 export default  Button
