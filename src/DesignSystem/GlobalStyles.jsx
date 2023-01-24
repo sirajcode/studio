@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
 /* ! margins */
 body, h1, h2, h3, h4, h5, figure, picture, p, div, a{ margin: 0; padding: 0; }
 /* ! setting up body */
-body{ line-height: 1.5; min-height: 100vh;font-family: 'Poppins';}
+body{ line-height: 1.5; font-size:14px; min-height: 100vh;font-family: 'Poppins';}
 /* ! pictures and images */
 img, picture{ max-width: 100%; display: block; }
 /* ! buttons, inputs fields, selections */
