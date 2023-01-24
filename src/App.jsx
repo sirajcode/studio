@@ -1,14 +1,12 @@
 import React from 'react'
 import GlobalStyle from './DesignSystem/GlobalStyles';
-// import Navbar from './App/Pages/Navbar';
-import Page from './App/Pages/Page';
+import Header from './Component/Header';
 
 const App = () => {
   return (
     <>
-    <GlobalStyle/>
-      {/* <Navbar/> */}
-      <Page/>
+     <GlobalStyle/>
+      <Header/>
     </>
   )
 }
