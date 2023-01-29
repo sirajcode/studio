@@ -3,106 +3,88 @@ import { colors, fontWieght, fontSize, BtnSize, RoundConers, borderWidth, spaces
 
 
 const Button = styled.button`
-
-//font size
-font-size: ${p => p.regular ? `${fontSize.regular}`:`${fontSize.text}`};
-//font weight
-font-weight: ${p => p.bold ? `${fontWieght.bold}` :`${fontWieght.strong}`}; 
-//color
-color: ${(p) => {
-    if (p.red) return `${colors.red}`
-      else if(p.blue) return`${colors.blue}`
-      else if(p.green) return `${colors.green}`
-      else if(p.yellow) return `${colors.yellow}`
-      else if(p.redshade) return `${colors.redshade}`
-      else if(p.blueshade) return `${colors.blueshade}`
-      else if(p.yellowshade) return `${colors.yellowshade}`
-      else if(p.greenshade) return `${colors.greenshade}`
-      else if(p.text) return `${colors.text}`
-      else if(p.lable) return `${colors.lable}`
-      else if(p.disable) return `${colors.disable}`
-      else if(p.darktext) return `${colors.darktext}`   
-      else if(p.darklable) return `${colors.darklable}`
-      else if(p.darkdisable) return `${colors.darkdisable}`
-      else if(p.white) return `${colors.white}`
-      else if(p.whiteshade) return `${colors.whiteshade}`
-      else if(p.dark) return `${colors.dark}`
-      else if(p.dark2) return `${colors.dark2}`                       
-      else if(p.dark3) return `${colors.dark3}`
-      else if(p.darkshade) return `${colors.darkshade}`
-  return 'none'
-}};   
-
-//background color  
-background-color: ${({bg}) => {
-    if (bg=== 'red') return `${colors.red}`
-      else if(bg==='blue') return`${colors.blue}`                 
-      else if(bg==='green') return `${colors.green}`              
-      else if(bg==='yellow') return `${colors.yellow}`           
-      else if(bg==='redshade') return `${colors.redshade}`        
-      else if(bg==='blueshade') return `${colors.blueshade}`      
-      else if(bg==='yellowshade') return `${colors.yellowshade}`  
-      else if(bg==='greenshade') return `${colors.greenshade}`              
-      else if(bg==='white') return `${colors.white}`              
-      else if(bg==='whiteshade') return `${colors.whiteshade}`    
-      else if(bg==='dark') return `${colors.dark}`                              
-      else if(bg==='darkshade') return `${colors.darkshade}`      
-      return 'none'
-}};
-
-//border color
-border-color:${p => {
-     if (p.borderred) return `${colors.red}`
-      else if(p.borderblue) return`${colors.blue}`
-      else if(p.bordergreen) return `${colors.green}`
-      else if(p.borderyellow) return `${colors.yellow}`
-      else if(p.borderredshade) return `${colors.redshade}`
-      else if(p.borderblueshade) return `${colors.blueshade}`
-      else if(p.borderyellowshade) return `${colors.yellowshade}`
-      else if(p.bordergreenshade) return `${colors.greenshade}`
-      else if(p.borderwhite) return `${colors.white}`
-      else if(p.borderwhiteshade) return `${colors.whiteshade}`
-      else if(p.borderdark) return `${colors.dark}`
-      else if(p.borderdarkshade) return `${colors.darkshade}`
-  return 'none'
+border:none;
+font-size: ${fontSize.text};
+font-weight: ${fontWieght.strong};
+border: 1px solid rgba(100, 100, 100, 0.5);
+background: rgba(150, 150, 150, 0.1);
+cursor: pointer;
+display: inline-block;
+border-radius: ${p => {
+    if (p.round) return `${RoundConers.round}`
+    else if (p.circle) return `${RoundConers.circle}`
+    return 'none'
 }}; 
+padding: ${p => {
+    if (p.sm) return `${BtnSize.small}`
+    else if (p.med) return `${BtnSize.medium}`
+    else if (p.lg) return `${BtnSize.large}`
+    return `${BtnSize.medium}`
+  }}; 
+${p => {
+  if (p.primary) {
+    return css`
+         background-color: ${colors.blue};
+         color:${colors.white};
+         border: none;
+        `;
+  }
+  else if(p.danger){
+      return css`
+         background-color: ${colors.red};
+         color:${colors.white};
+         border: none;
+    `;
+  }
+   else if(p.succes) {
+      return css`
+        background-color: ${colors.green};
+        color:${colors.white};
+        border: none;
+    `;
+  }
+   else if(p.dark) {
+      return css`
+      background-color: ${colors.darkshade};
+      color:${colors.darkshade}; 
+      border: none;   
+    `;
+  }
+    }
+  }
+${p => {
+  if (p.primary && p.outline) {
+    return css`
+      border: 2px solid   ${colors.blue};
+      color:   ${colors.blue};
+      background: transparent;
+        `;
+  }
 
-//outline
-//border radius
-border-radius: ${({ round }) => {
-      if(round === '1') return `${RoundConers.small}`
-      else if(round === '2') return `${RoundConers.medium}`
-      else if(round === '3') return `${RoundConers.large}`
-      else if(round === '4') return `${RoundConers.exlarge}`
-  return 'none'
-}}; 
-//border size
-border-width:${({ outline }) => {
-      if(outline === '1') return `${borderWidth.small}`
-      else if(outline === '2')  return `${borderWidth.medium}`
-      else if(outline === '3') return `${borderWidth.large}`
-  return 'none'
-}}; 
-// style
-border-style:${(p) => {
-      if(p.solid) return 'solid'
-      else if(p.dotted) return 'dotted'
-      else if(p.dashed) return 'dashed'
-      else if(p.double) return 'double'
-      else if(p.groove) return 'groove'
-      else if(p.ridge) return 'ridge'
-      else if(p.inset) return 'inset'
-      else if(p.outset) return 'outset'
-  return 'none'
-}}; 
-// size of button
-padding: ${(p) => {
-      if (p.sm) return `${BtnSize.small}`
-      else if(p.med) return `${BtnSize.medium}`
-      else if(p.lg) return  `${BtnSize.large}`
-}};
-    cursor: pointer;
-    display: inline-block;
+  else if(p.danger && p.outline){
+      return css`
+      border: 2px solid   ${colors.red};
+      color:   ${colors.red};
+      background: transparent;
+    `;
+  }
+   else if(p.succes && p.outline) {
+      return css`
+      border: 2px solid  ${colors.green};
+      color:  ${colors.green};
+      background: transparent;
+    `;
+  }
+  
+  else if(p.dark && p.outline) {
+    return css`
+      border: 2px solid ${colors.darkshade};
+      color: ${colors.darkshade};
+      background: transparent;
+    `;
+     }
+    }
+  }
 
 // ! button space  top/left/right/bottom ✔
 
