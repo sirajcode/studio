@@ -1,67 +1,64 @@
 import styled ,{ css } from "styled-components";
 import {colors, fontSize, fontWieght }from "../Variable";
-//todo
-// props are changed accordingly
-// code properties is pretty messed up
 
 const Text = styled.p`
 
 // font size
-
-font-size:${(props) => {
-  if (props.regular) return `${fontSize.regular}`
-  else if (props.smallHeading) return `${fontSize.small}`
-  else if(props.mediumHeading) return `${fontSize.medium}`
-  else if(props.largeHeading) return `${fontSize.large}`
+font-size:${p => {
+  if (p.regular) return `${fontSize.regular}`
+  else if (p.smallHeading) return `${fontSize.small}`
+  else if(p.mediumHeading) return `${fontSize.medium}`
+  else if(p.largeHeading) return `${fontSize.large}`
   return `${fontSize.text}`
 }};
 
 //font wieght
-font-weight: ${(props) =>{
-      if(props.strong) return `${fontWieght.strong}`
-      else if(props.bold) return `${fontWieght.bold}`
+font-weight: ${p =>{
+      if(p.strong) return `${fontWieght.strong}`
+      else if(p.bold) return `${fontWieght.bold}`
    return `${fontWieght.normal}`
 }}; 
 //font style
-font-style: ${props => props.italic ? 'italic' : 'normal'};
+font-style: ${p => p.italic ? 'italic' : 'normal'};
 //text alignement
-text-align: ${(props) => {
-    if (props.center) return 'center'
-    else if (props.right) return 'right'
+text-align: ${p => {
+    if (p.center) return 'center'
+    else if (p.right) return 'right'
     return  'left'
 }};
 //font  color
-color: ${(props) => {
-    if (props.primary) return `${colors.primary}`
-      else if(props.secondary) return`${colors.secondary}`
-      else if(props.tertiary) return `${colors.tertiary}`
-      else if(props.dark) return `${colors.dark}`
-      else if(props.success) return `${colors.success}`
-      else if(props.text) return `${colors.text}`
-      else if(props.subtleText) return `${colors.subtleText}`
-      else if(props.accent) return `${colors.accent}`
-      else if(props.light) return `${colors.light}`
-      else if(props.white) return `${colors.white}`
+color: ${p => {
+    if (p.primary) return `${colors.blue}`
+      else if(p.succes) return`${colors.green}`
+      else if(p.danger) return `${colors.red}`
+      else if(p.warning) return `${colors.yellow}`
+      else if(p.text) return `${colors.text}`
+      else if(p.label) return `${colors.lable}`
+      else if(p.disable) return `${colors.disable}`
+      else if(p.darktext) return `${colors.darktext}`
+      else if(p.darklabel) return `${colors.darklable}`
+      else if(p.darkdisable) return `${colors.darkdisable}`
   return 'none'
 }};  
 //bakground  color
 background-color: ${({bg}) => {
-    if (bg=== 'primary') return `${colors.primary}`
-      else if(bg === 'secondary') return `${colors.secondary}`
-      else if(bg === 'tertiary') return `${colors.tertiary}`
-      else if(bg === 'dark') return `${colors.dark}`
-      else if(bg === 'success') return `${colors.success}`
-      else if(bg === 'text') return `${colors.text}`
-      else if(bg === 'subtleText') return `${colors.subtleText}`
-      else if(bg === 'accent') return `${colors.accent}`
-      else if(bg === 'light') return `${colors.light}`
+    if (bg=== 'primary') return `${colors.blue}`
+      else if(bg === 'danger') return `${colors.red}`
+      else if(bg === 'succes') return `${colors.green}`
+      else if(bg === 'warning') return `${colors.yellow}`
+      else if(bg === 'dangershade') return `${colors.redshade}`
+      else if(bg === 'primaryshade') return `${colors.blueshade}`
+      else if(bg === 'warningshade') return `${colors.yellowshade}`
       else if(bg === 'white') return `${colors.white}`
+      else if(bg === 'whiteshade') return `${colors.whiteshade}`
+      else if(bg === 'dark') return `${colors.dark}`
+      else if(bg === 'darkshade') return `${colors.darkshade}`
   return 'none'
 }};
 //line throgh
-text-decoration-line: ${props => props.deleted ? 'line-through' : 'none'};
- ${(props) => {
-  if (props.code) {
+text-decoration-line: ${p => p.deleted ? 'line-through' : 'none'};
+ ${(p) => {
+  if (p.code) {
     return css`
         margin: 0 0.2em;
         padding-inline: 0.4em;
@@ -72,7 +69,7 @@ text-decoration-line: ${props => props.deleted ? 'line-through' : 'none'};
         display: inline;
         `;
      }
-  else if(props.keyboard) {
+  else if(p.keyboard) {
       return css`
           margin: 0 0.2em;
           padding-inline: 0.4em;
