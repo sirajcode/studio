@@ -46,7 +46,7 @@ ${p => {
    else if(p.dark) {
       return css`
       background-color: ${colors.darkshade};
-      color:${colors.darkshade}; 
+      color:${colors.whiteshade}; 
       border: none;   
     `;
   }
