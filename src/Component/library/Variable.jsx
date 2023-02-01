@@ -26,12 +26,14 @@ export const colors = {
         whiteshade:"#f2f5f5",
         //dark colors
         dark: "#100f10",
-        dark2: "#1b1b1b",
-        dark3: "#242424",
         darkshade:"#363636",
+        //dark backgrounds
+        bg1: "#1b1b1b",
+        bg2: "#242424",
+        
 }
 
-//font - sizes   
+//font - sizes            14px          18px       24px        30px      36px
 export const fontSize = ["0.875rem", "1.125rem", "1.5rem", "1.875rem", "2.25rem"];
 fontSize.text = fontSize[0];
 fontSize.regular = fontSize[1];
@@ -46,10 +48,11 @@ fontWieght.strong = fontWieght[1];
 fontWieght.bold = fontWieght[2];
 
 //button sizes 
-export const BtnSize = ["0.25rem 0.5625rem", "0.4375rem 1.125rem", "0.75rem 1.25rem"];
+export const BtnSize = ["0.25rem 0.5625rem", "0.4375rem 1.125rem", "0.75rem 1.25rem" ,"5px 5px 0.1px 5px"];
 BtnSize.small = BtnSize[0];
 BtnSize.medium = BtnSize[1];
 BtnSize.large = BtnSize[2];
+BtnSize.circle = BtnSize[3];
 
  //Border widths
 export const borderWidth = ["0.125rem", "0.1875rem", "0.25rem"];
@@ -58,11 +61,10 @@ borderWidth.medium = borderWidth[1];
 borderWidth.large = borderWidth[2];
 
 // corners
-export const RoundConers = ["0.3rem", "0.5rem", "0.7rem", "200rem"];
-RoundConers.small = RoundConers[0];
-RoundConers.medium = RoundConers[1];
-RoundConers.large = RoundConers[2];
-RoundConers.exlarge = RoundConers[3];
+export const RoundConers = [ "0.75rem", "200rem"];
+RoundConers.round = RoundConers[0];
+RoundConers.circle = RoundConers[1];
+
 
 //spaces
 export const spaces = ["0.25rem", "0.5rem", "0.75rem", "1.25rem", "1.5rem", "2rem"];
@@ -73,13 +75,41 @@ spaces.large = spaces[3];
 spaces.larger = spaces[4];
 spaces.extraLarge = spaces[5];
 
-// not tracked
+//grid
+export const grid = ["10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%"];
+grid.grid1 = grid[0];
+grid.grid2 = grid[1];
+grid.grid3 = grid[2];
+grid.grid4 = grid[3];
+grid.grid5 = grid[4];
+grid.grid6 = grid[5];
+grid.grid7 = grid[6];
+grid.grid8 = grid[7];
+grid.grid9 = grid[8];
 
+//columns
+export const Wide = ["100%", "49%", "32%", "24%", "19%", "15.667%", "13.28571%"];
+Wide.one = Wide[0];
+Wide.two = Wide[1];
+Wide.three = Wide[2];
+Wide.four = Wide[3];
+Wide.five = Wide[4];
+Wide.six = Wide[5];
+Wide.seven = Wide[6];
 //break points
-const breakpoints = ["37.5rem", "56.25rem", "75rem", "112.5rem"];
-breakpoints.sm = breakpoints[0];
-breakpoints.md = breakpoints[1];
-breakpoints.lg = breakpoints[2];
-breakpoints.xl = breakpoints[3];
+const breakpoints = {
+  sm: '"37.5rem',
+  med: '56.25rem',
+  lg: '75rem',
+  xl: '112.5rem',
+}
+export const device = {
+  phone: `(min-width: ${breakpoints.sm})`,
+  tab: `(min-width: ${breakpoints.med})`,
+  laptop: `(min-width: ${breakpoints.lg})`,
+  desktop: `(min-width: ${breakpoints.xl})`,
+};
 
+//import { device } from '';
 
+//  @media ${device.laptop} {}
