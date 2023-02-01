@@ -1,7 +1,9 @@
 import styled,{css} from 'styled-components'
-
+import { backGround } from './Common'
 const Container = styled.div`
+
 margin: 0px auto;
+background-color: ${backGround};
 ${p => {
     if (p.dashboard) {
         return css`
