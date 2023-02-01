@@ -17,6 +17,7 @@ padding: ${p => {
     if (p.sm) return `${BtnSize.small}`
     else if (p.med) return `${BtnSize.medium}`
     else if (p.lg) return `${BtnSize.large}`
+    else if (p.oval) return `${BtnSize.circle}`
     return `${BtnSize.medium}`
   }}; 
 
