@@ -1,5 +1,5 @@
 import {css} from 'styled-components'
-import { RoundConers, spaces, colors, fontSize, fontWieght,grid} from './Variable'
+import { RoundConers, spaces, colors, fontSize, fontWieght,grid, Wide} from './Variable'
 
 // font size
 export const textSize = css`${p => {
@@ -16,7 +16,7 @@ export const Weight =css `${p =>{
    return `${fontWieght.normal}`
 }};`
 //style
-export const Style = css`${props => props.italic ? 'italic' : 'normal'};`
+export const Style = css`${p => p.italic ? 'italic' : 'normal'};`
 //Align
 export const Align = css`${p => {
     if (p.center) return 'center'
@@ -52,8 +52,11 @@ export const backGround  = css`${({bg}) => {
       else if(bg === 'whiteshade') return `${colors.whiteshade}`
       else if(bg === 'dark') return `${colors.dark}`
       else if(bg === 'darkshade') return `${colors.darkshade}`
+      else if(bg === 'bgc') return `${colors.bg1}`
+      else if(bg === 'fgc') return `${colors.bg2}`
   return 'none'
 }};`
+export const Border = css`${p => p.border ? 'border:1px solid rgba(100, 100, 100, 0.1);' : 'none'};`
 //border radius
 export const Radius = css` ${p => {
     if (p.round) return `${RoundConers.round}`
@@ -61,7 +64,7 @@ export const Radius = css` ${p => {
     return 'none'
 }};`
 //width
-export const Width=css`${({width}) => {
+export const Width =css`${({width}) => {
     if(width==='1') return '10%'
     else if(width==='2') return `${grid.grid1}`
     else if(width==='3') return `${grid.grid2}`
@@ -72,6 +75,16 @@ export const Width=css`${({width}) => {
     else if(width==='8') return `${grid.grid7}`
     else if(width==='9') return `${grid.grid8}`
 }}`
+//column
+export const columns = css`${p => {
+    if (p.one) return `${Wide.one}`
+    else if(p.two) return `${Wide.two}`
+    else if(p.three) return `${Wide.three}`
+    else if(p.four) return `${Wide.four}`
+    else if(p.five) return `${Wide.five}`
+    else if(p.six) return `${Wide.six}`
+    else if(p.seven) return `${Wide.seven}`
+}};`
  //margin
  export const Space =css `${({ Space }) => {
       if(Space === '1') return `${spaces.smaller}`
