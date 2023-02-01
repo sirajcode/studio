@@ -1,5 +1,5 @@
 import styled ,{ css } from "styled-components";
-import {textSize,textColor,backGround,Weight,Style,Align} from "./Common";
+import {textSize,textColor,backGround,Weight,Style,Align, Space,Top, Bottom,Start,End} from "./Common";
 
 const Text = styled.p`
 font-size: ${textSize};
@@ -7,8 +7,15 @@ font-weight: ${Weight};
 font-style: ${Style};
 color:${textColor};
 background-color:${backGround};
-text-align: ${Align};
+text-align:${Align};
 text-decoration-line: ${p => p.deleted ? 'line-through' : 'none'};
+//margins
+margin:${Space};
+margin-top:${Top};
+margin-bottom:${Bottom};
+margin-left:${Start};
+margin-right:${End};
+//other props
  ${(p) => {
   if (p.code) {
     return css`
