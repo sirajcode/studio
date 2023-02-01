@@ -1,15 +1,15 @@
 import styled from 'styled-components'
-import {Space,Top,Start,Bottom,End,Weight,textSize,Style,Align,Radius, textColor, backGround, Padding,PaddingStart,PaddingBottom,PaddingTop, PaddingEnd, Width} from './Common'
+import { Space, Top, Start, Bottom, End, Weight, textSize, Style, Align, Radius, textColor, backGround, Padding, PaddingStart, PaddingBottom, PaddingTop, PaddingEnd, Width, Border, columns } from './Common'
 
 /* 
  todo: 
- - re-desiging section box ✔
- - adding new component as card  ✔
- - adding some end user desinging to box and cards ❌
+ - section box ✔
  - refine flexbox card ✔
  - refine columns card ✔
+ - refine grid card ✔
 */
 
+// todo: Section
 export const Section = styled.div`
 font-size:${textSize};
 font-weight: ${Weight};
@@ -18,7 +18,7 @@ text-align: ${Align};
 border-radius: ${Radius}; 
 color: ${textColor};   
 background-color: ${backGround}; 
-${p => p.border ? 'border: 1px solid rgba(100, 100, 100, 0.1);' : 'none'};
+${Border};
 //margins
 margin:${Space};
 margin-top:${Top};
@@ -66,14 +66,34 @@ export const Flex = ({
 
 // todo: column
 export const Column = styled.div`
-width: ${p => {
-        if (p.three) return '33.33%'
-        else if (p.four) return '25%'
-        else if(p.two) return '50%'
-        return '0'
-}};
+//columns
+width:${columns};
+//style
+border-radius: ${Radius}; 
+background-color: ${backGround}; 
+${Border};
+//margins
+margin:${Space};
+margin-top:${Top};
+margin-bottom:${Bottom};
+margin-left:${Start};
+margin-right:${End};
+//paddings
+padding: ${Padding}; 
+padding-top: ${PaddingTop}; 
+padding-left: ${PaddingStart}; 
+margin-right: ${PaddingEnd}; 
+padding-bottom: ${PaddingBottom}; 
 
-// space  top/left/right/bottom ✔
+`
+// todo: grid
+export const Grid = styled.div`
+//grid
+width:${Width};
+//style
+border-radius: ${Radius}; 
+background-color: ${backGround}; 
+${Border};
 //margins
 margin:${Space};
 margin-top:${Top};
@@ -87,32 +107,3 @@ padding-left: ${PaddingStart};
 margin-right: ${PaddingEnd}; 
 padding-bottom: ${PaddingBottom}; 
 `
-export const Grid = styled.div`
-width:${Width};
-`
-
-
-// export const Card = styled.div`
-// font-size:${textSize};
-// font-weight: ${Weight};
-// font-style: ${Style};
-// text-align: ${Align};
-// border-radius: ${Radius}; 
-// color: ${textColor};   
-// background-color: ${backGround}; 
-// ${p => p.border ? 'border: 1px solid rgba(100, 100, 100, 0.1);' : 'none'};
-// //margin
-// margin:${Space};
-// margin-top:${Top};
-// margin-bottom:${Bottom};
-// margin-left:${Start};
-// margin-right:${End};
-// //paddings
-// padding: ${Padding}; 
-// padding-top: ${PaddingTop}; 
-// padding-left: ${PaddingStart}; 
-// margin-right: ${PaddingEnd}; 
-// padding-bottom: ${PaddingBottom}; 
-// //width
-// width:${Width};
-// `;
