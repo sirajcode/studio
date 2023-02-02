@@ -1,40 +1,39 @@
 import React from 'react'
 import { VscFiles,VscGithub,VscNote,VscLibrary } from "react-icons/vsc";
 import { MdOutlineDashboard } from "react-icons/md";
-import { Section, Flex } from '../../library/common/Util'
-import Text from '../../library/common/Text'
+import { Section, Flex } from '../../library/Util'
+import {Text} from '../App'
 
 const Sidebar = () => {
   const SideBartop = {
     width: '55px',
-    position:'fixed'
+    position: 'fixed',
   }
-  const SideBarHieght = {height:'100vh'}
   return (
     <>
-      <Section bg='dark' darktext style={SideBartop}>
-        <Flex flexDirection='Column' Justify='between' style={SideBarHieght} >
+      <Section bg='bgc' darktext style={SideBartop}>
+        <Flex flexDirection='column' justifyContent='space-between' height='100vh' >
           {/* top */}
-          <Section top='3' start='3'>
+          <Section Top='3' Start='3'>
               <Text mediumHeading><MdOutlineDashboard /></Text>
           </Section>
           {/* middle */}
           <Section>
-            <Section  start='3' >
+            <Section  Start='3' >
             <Text smallHeading><VscNote/></Text>
             </Section>
-            <Section space='3'>
+            <Section Space='3'>
             <Text smallHeading><VscFiles/></Text>
             </Section>
-            <Section space='3'>
+            <Section Space='3'>
             <Text smallHeading><VscLibrary/></Text>
             </Section>
           </Section>
           {/* bottom */}
-          <Section bottom='3'  start='3'>
+          <Section Bottom='3'  Start='3'>
             <Text smallHeading><VscGithub /></Text>
           </Section>
-        </Flex>
+          </Flex>
       </Section>
     </>
   )
