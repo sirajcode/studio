@@ -1,6 +1,7 @@
 import React from 'react'
 import { VscFiles,VscGithub,VscNote,VscLibrary } from "react-icons/vsc";
 import { MdOutlineDashboard } from "react-icons/md";
+import {Link} from 'react-router-dom'
 import { Section, Flex } from '../../library/Util'
 import {Text} from '../App'
 
@@ -15,18 +16,18 @@ const Sidebar = () => {
         <Flex flexDirection='column' justifyContent='space-between' height='100vh' >
           {/* top */}
           <Section Top='3' Start='3'>
-              <Text mediumHeading><MdOutlineDashboard /></Text>
+              <Text mediumHeading><Link to='/'><MdOutlineDashboard /></Link></Text>
           </Section>
           {/* middle */}
           <Section>
             <Section  Start='3' >
-            <Text smallHeading><VscNote/></Text>
+            <Text smallHeading><Link to='intro'><VscNote/></Link></Text>
             </Section>
             <Section Space='3'>
-            <Text smallHeading><VscFiles/></Text>
+            <Text smallHeading><Link to='component'><VscFiles/></Link></Text>
             </Section>
             <Section Space='3'>
-            <Text smallHeading><VscLibrary/></Text>
+            <Text smallHeading><Link to='library'><VscLibrary/></Link></Text>
             </Section>
           </Section>
           {/* bottom */}
