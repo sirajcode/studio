@@ -33,8 +33,8 @@ const Intro = () => {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis expedita distinctio id blanditiis doloribus vero cumque alias explicabo sed esse, quibusdam voluptas sequi iusto quisquam officia deleniti quo repudiandae? Facere!
               </Text>
             <Section  Top='6'>
-              <Button End='2' round primary outline>library </Button> 
-              <Button Start='2' round danger outline>components </Button>
+              <Button End='2' med round primary outline>library </Button> 
+              <Button Start='2' med round danger outline>components </Button>
             </Section>
           <Section Top='6'><Code code={here} language="javascript" /></Section>
           <Text darktext smallHeading Top='6' Bottom='4'> Guide and Resources</Text>

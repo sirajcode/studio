@@ -1,9 +1,7 @@
 import React from 'react'
 import { VscFiles,VscGithub,VscNote,VscLibrary } from "react-icons/vsc";
 import { MdOutlineDashboard } from "react-icons/md";
-import {Link} from 'react-router-dom'
-import { Section, Flex } from '../../library/Util'
-import {Text} from '../App'
+import { Section, Flex, Text, StyledLink } from '../App'
 
 const Sidebar = () => {
   const SideBartop = {
@@ -16,23 +14,23 @@ const Sidebar = () => {
         <Flex flexDirection='column' justifyContent='space-between' height='100vh' >
           {/* top */}
           <Section Top='3' Start='3'>
-              <Text mediumHeading><Link to='/'><MdOutlineDashboard /></Link></Text>
+              <Text mediumHeading><StyledLink  to='/'><MdOutlineDashboard /></StyledLink></Text>
           </Section>
           {/* middle */}
           <Section>
             <Section  Start='3' >
-            <Text smallHeading><Link to='intro'><VscNote/></Link></Text>
+            <Text smallHeading><StyledLink  to='intro'><VscNote/></StyledLink></Text>
             </Section>
             <Section Space='3'>
-            <Text smallHeading><Link to='component'><VscFiles/></Link></Text>
+            <Text smallHeading><StyledLink  to='component'><VscFiles/></StyledLink></Text>
             </Section>
             <Section Space='3'>
-            <Text smallHeading><Link to='library'><VscLibrary/></Link></Text>
+            <Text smallHeading><StyledLink  to='library'><VscLibrary/></StyledLink></Text>
             </Section>
           </Section>
           {/* bottom */}
           <Section Bottom='3'  Start='3'>
-            <Text smallHeading><VscGithub /></Text>
+            <Text smallHeading><StyledLink ><VscGithub /></StyledLink></Text>
           </Section>
           </Flex>
       </Section>
