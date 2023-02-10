@@ -64,11 +64,10 @@ const Header = () => {
         <Column  two border Padded='4' round bg='bgc' Top='3'>
           <Text  Bottom='3' darktext smallHeading bold>Siraj <Button default circle>developer</Button></Text>
           <Text darkdisable Bottom='4' >  Hi, i am siraj. a Front-end engineer and designs system developer</Text>
-        
-              <Button default oval round><VscGithub size={20}/> </Button>
-              <Button Start='2' default  oval round ><p><VscTwitter size={20}/></p></Button>
-              <Button Start='2' default oval round ><p><VscGlobe size={20} /></p></Button>
-          </Column>
+          <Button default oval round><VscGithub size={20}/> </Button>
+          <Button Start='2' default  oval round ><p><VscTwitter size={20}/></p></Button>
+          <Button Start='2' default oval round ><p><VscGlobe size={20} /></p></Button>
+        </Column>
       </Row>
        <StyledSec>
         <Row justifyContent='space-between' >
