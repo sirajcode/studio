@@ -7,7 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-*.gitignore
+.gitignore
 
 # Editor directories and files
 .vscode/*
