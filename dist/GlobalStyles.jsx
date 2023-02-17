@@ -21,7 +21,7 @@ input, button, select, a{ font: inherit; }
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
+  /* width: 8px; */
 
 }
 /* Track */
