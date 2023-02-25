@@ -1,8 +1,7 @@
-import { border } from './lib/border';
-import { color } from './lib/color';
-import { flexbox, grid, layout, background, shadow } from './lib/layout';
-import { space } from './lib/space';
-import { typography } from './lib/typo';
+import { color } from "./color";
+import { border } from "./border";
+import { space } from "./space";
+import { typography } from "./typo";
+import { layout, background, flexbox, grid, shadow } from "./layout";
 
-
-export { flexbox, layout, grid, background, shadow, typography, space, color, border }
+export {color,border,space,typography,layout,background,flexbox,grid,shadow}
