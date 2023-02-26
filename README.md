@@ -3,24 +3,27 @@
 <p align="center">
    styled components enchanced with props
   <br>
-  <a href=""><strong>explore Studio props »</strong></a>
+  <!-- <a href=""><strong>explore Studio props »</strong></a>
   <br>
   <a href="">Issue</a>
   ·
   <a href="">Request feature</a>
   ·
-  <a href="">Components</a>
+  <a href="">Props</a> -->
 </p>
 
+**v 0.1.6** 
 
-### Tech Stack
+### Technologies
 
-**Design system:** React, styled components, css
-**webpage:** React JS, styled components, styled-props-system
+Project is created with:
+- React 18.0.17
+- styled components 5.3.6
+- css 3
 
-### Installation
+### Setup
 
-Install my-project with npm
+To run studio-props-system, install it locally using npm:
 
 ```bash
   npm install studio-props-system
@@ -34,7 +37,6 @@ import {color, typography } from 'studio-props-system';
 const Text = styled.p`
 ${color}
 ${typography}
-
 `;
 
 function App() {
@@ -44,10 +46,21 @@ function App() {
 
 ### Features
 
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
+- light weight.
+- simpler (easy-to-use).
+- covered css/styled properties.
+- work with `styled-components` only.
+
+#### Todo
+
+> studio props system is in its developement phase yet, instead of using latest version of `studio-props-system` use stable version mentioned on the top of page. 
+
+under progress 🚧
+
+- Live preview.
+- button variant.
+- webpage.
+- rwd for devices.
 
 ### Author
 
