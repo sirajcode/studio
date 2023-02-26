@@ -5,7 +5,6 @@
   <br>
   <a href=""><strong>explore Studio props »</strong></a>
   <br>
-  <br>
   <a href="">Issue</a>
   ·
   <a href="">Request feature</a>
@@ -14,30 +13,43 @@
 </p>
 
 
+### Tech Stack
 
-## Installation
+**Design system:** React, styled components, css
+**webpage:** React JS, styled components, styled-props-system
+
+### Installation
 
 Install my-project with npm
 
 ```bash
   npm install studio-props-system
 ```
-    
-## Usage
+### Usage
 
 ```javascript
-import {color} from 'studio-props-system';
 import styled from 'styled-components';
+import {color, typography } from 'studio-props-system';
 
-const Text = style.p`
+const Text = styled.p`
 ${color}
-`
+${typography}
+
+`;
 
 function App() {
-  return <Text color='Green200' >studio props system</Text>
+  return <Text fontSize='smHeading' color='Gray500'>studio props system</Text>
+}
 ```
 
-## Author
+### Features
+
+- Light/dark mode toggle
+- Live previews
+- Fullscreen mode
+- Cross platform
+
+### Author
 
 **M. Siraj**
 
