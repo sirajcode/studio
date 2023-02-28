@@ -1,15 +1,15 @@
 <h2 align="center">Studio props system</h2>
 
 <p align="center">
-   styled components enchanced with props
+  React styled components enchanced with props
   <br>
-  <!-- <a href=""><strong>explore Studio props »</strong></a>
+  <!-- <a href=""><strong>explore studio props »</strong></a>
   <br>
-  <a href="">Issue</a>
+  <a href="">issue</a>
   ·
-  <a href="">Request feature</a>
+  <a href="">feature request</a>
   ·
-  <a href="">Props</a> -->
+  <a href="">props</a> -->
 </p>
 
 **v 0.1.6** 
@@ -55,9 +55,9 @@ function App() {
 
 > studio props system is in its developement phase yet, instead of using latest version of `studio-props-system` use stable version mentioned on the top of page. 
 
-under progress 🚧
+#### under progress 🚧
 
-- Live preview.
+- Live preview. 
 - button variant.
 - webpage.
 - rwd for devices.
