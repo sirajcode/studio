@@ -34,6 +34,8 @@ export const typography = css`
     font-size: ${p => p.fontSize};
     font-weight:${p => p.fontWeight};
     font-style:${p => p.fontStyle};
+    text-align: ${p => p.textAlign};
+    text-decoration: ${p => p.textDecoration};
     ${p =>p.code ? `${codecss}` : 'none'}
     ${p=>p.keyboard ? `${keyboardcss}` : 'none'}
  `
