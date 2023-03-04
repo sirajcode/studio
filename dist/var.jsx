@@ -294,6 +294,15 @@ BlueGray600:'#546E7A',
 BlueGray700:'#455A64',
 BlueGray800:'#37474F',
 BlueGray900: '#263238',
+
+//dark 
+Dark50: "#E0E0E0",
+Dark100: "#BDBDBD",
+Dark200: "#616161",
+Dark300: "#212121",
+Dark400: "#1b1b1b",
+Dark500: "#242424",
+       
 }
 export const type = {
      text:'0.875rem',
