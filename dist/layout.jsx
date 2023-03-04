@@ -17,6 +17,7 @@ const grid = css`
     grid-row-gap:${p => p.gridRowGap} ;
     grid-column: ${p => p.gridColumn};
     grid-row: ${p => p.gridRow};
+    place-items: ${p => p.placeItems};
 `
 
 const layout = css`
