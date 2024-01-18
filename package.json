@@ -1,7 +1,7 @@
 {
   "name": "studio-props-system",
   "description": "React styled components enhanced with props",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "author": "engsiraj",
   "license": "ISC",
   "main": "./dist/index.jsx",

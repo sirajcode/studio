@@ -12,7 +12,7 @@
   <a href="">props</a> -->
 </p>
 
-**v 0.1.6** 
+**v 0.1.7** 
 
 ### Technologies
 
@@ -51,17 +51,6 @@ function App() {
 - covered css/styled properties.
 - work with `styled-components` only.
 
-#### Todo
-
-> studio props system is in its developement phase yet, instead of using latest version of `studio-props-system` use stable version mentioned on the top of page. 
-
-#### under progress 🚧
-
-- Live preview. 
-- button variant.
-- webpage.
-- rwd for devices.
-
 ### Author
 
 **M. Siraj**
@@ -70,5 +59,3 @@ function App() {
 
 [twitter]: https://twitter.com/engsiraj_
 [linkedin]: https://linkedin.com/in/engsiraj
-
-
